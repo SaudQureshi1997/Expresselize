@@ -5,7 +5,7 @@ A framework based on express-sequelize with all the basic bindings necessary for
 
 ## Dependencies:
   ### 1. Node.js (12+) [download](https://nodejs.org/en/download/)
-  ### 2. Sequelize (v6) [download]
+  ### 2. MariaDB
   ### 3. NPM (Compatible with given Node version) []
   ### 3. Yarn
 
