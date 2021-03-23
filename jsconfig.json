@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "module": "es6",
+      "paths": {
+        "@utils/*": ["./src/utils/*"],
+        "@exceptions/*": ["./src/http/exceptions/*"],
+        "@controllers/*": ["./src/http/controllers/*"],
+        "@models/*": ["./src/models/*"],
+        "@http/*": ["./src/http/*"],
+        "@middlewares/*": ["./src/http/middlewares/*"],
+        "@migrations/*": ["./src/migrations/*"]
+      }
+    }
+  }

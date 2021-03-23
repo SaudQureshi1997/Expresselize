@@ -1,0 +1,45 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prod": "node -r dotenv/config ./dist/index.js",
+    "build": "rm -rf dist && babel src -d ./dist",
+    "dev": "rm -rf dist && concurrently \"babel src -d dist --watch\"  \"nodemon -r dotenv/config ./dist/index.js\"",
+    "start": "npm run build && npm run prod -p $PORT",
+    "migrate": "npm run build && node -r dotenv/config ./migrate"
+  },
+  "keywords": [],
+  "author": "writedynamic@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.12.9",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/runtime": "^7.12.5",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "bcrypt": "^5.0.0",
+    "bunyan": "^1.8.14",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mariadb": "^2.5.3",
+    "moment": "^2.29.1",
+    "node-input-validator": "^4.2.1",
+    "sequelize": "^6.6.2",
+    "source-map-support": "^0.5.19"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "eslint": "^7.14.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "nodemon": "^2.0.6"
+  }
+}
